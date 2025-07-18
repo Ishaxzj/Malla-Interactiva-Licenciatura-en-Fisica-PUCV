@@ -1,92 +1,62 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
-
-body, html {
-  margin: 0; padding: 0;
+body {
   font-family: 'Poppins', sans-serif;
   background-color: #f8f9fa;
   color: #333;
+  margin: 0;
+  padding: 0;
 }
 
 h1 {
+  font-weight: 700;
+  color: #c2185b;
   text-align: center;
-  margin: 20px 0;
-  font-weight: 600;
+  margin: 30px 0;
 }
 
-.index .buttons {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 30px;
-  padding: 50px 0;
-}
-
-.boton {
-  position: relative;
-  display: inline-block;
-  width: 200px;
-  height: 200px;
-  border-radius: 50%;
-  background-color: #ff4d75;
-  color: white;
-  font-size: 1.1em;
-  font-weight: 600;
-  text-align: center;
-  padding-top: 60px;
-  text-decoration: none;
-  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
-  transition: transform .2s, box-shadow .2s;
-}
-
-.boton::before {
-  content: "";
-  position: absolute;
-  top: 15px; left: calc(50% - 25px);
-  width: 50px;
-  height: 50px;
-  background: url('') no-repeat center;
-  background-size: contain;
-}
-
-.boton:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 16px 30px rgba(0,0,0,0.25);
-}
-
-body.malla {
-  padding: 30px;
-  background: #fff;
-}
-
-.grid {
+.malla-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-  gap: 15px;
-  max-width: 1000px;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+  padding: 20px;
+  max-width: 1200px;
   margin: auto;
 }
 
-.ramo {
-  background-color: #6c757d;
-  color: white;
-  padding: 15px;
+.semestre {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  padding: 20px;
   border-radius: 8px;
-  text-align: center;
+}
+
+.semestre h2 {
+  margin-top: 0;
+  font-size: 1.3em;
+  color: #555;
+}
+
+.ramo {
+  background-color: #f06292;
+  color: white;
+  padding: 10px;
+  margin: 8px 0;
+  border-radius: 5px;
   cursor: pointer;
-  transition: background .3s, transform .2s;
+  transition: background 0.2s;
+  text-align: center;
 }
 
-.ramo:hover:not(.bloqueado) {
-  background-color: #5a6268;
-  transform: translateY(-4px);
-}
-
-.ramo.aprobado {
-  background-color: #28a745;
+.ramo:hover {
+  background-color: #ec407a;
 }
 
 .ramo.bloqueado {
-  background-color: #d6d8db;
-  color: #666;
+  background-color: #e0e0e0;
+  color: #999;
   cursor: not-allowed;
+}
+
+.ramo.aprobado {
+  background-color: #4db6ac !important;
+  color: white;
 }
