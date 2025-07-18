@@ -1,1 +1,76 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <title>Malla Física con Mención en Astronomía</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body class="malla">
+  <h1>Malla Interactiva – Física con Mención en Astronomía (PUCV)</h1>
+  <div class="grid">
+    <!-- Primer año - Semestre 1 -->
+    <div id="intro-fisica" class="ramo" data-desbloquea="exp-mecanica">Introducción a la física</div>
+    <div id="historia" class="ramo">Historia de la física</div>
+    <div id="estrategias" class="ramo">Estrategias discursivas</div>
+    <div id="calculo1" class="ramo" data-desbloquea="calculo2">Cálculo 1</div>
+    <div id="algebra" class="ramo" data-desbloquea="algebra-lineal">Álgebra</div>
+    <div id="antro" class="ramo">Antropología Cristiana</div>
 
+    <!-- Semestre 2 -->
+    <div id="exp-mecanica" class="ramo bloqueado" data-desbloquea="exp-termo, mecanica">Física experimental mecánica</div>
+    <div id="fisica-mecanica" class="ramo">Física general mecánica</div>
+    <div id="calculo2" class="ramo bloqueado" data-desbloquea="calculo3, mecanica">Cálculo 2</div>
+    <div id="algebra-lineal" class="ramo bloqueado">Álgebra lineal y ecuaciones diferenciales</div>
+    <div id="etica" class="ramo">Ética Cristiana</div>
+
+    <!-- Segundo año - Semestre 3 -->
+    <div id="exp-termo" class="ramo bloqueado" data-desbloquea="exp-electro">Física experimental termodinámica</div>
+    <div id="fisica-termo" class="ramo">Física general termodinámica</div>
+    <div id="ingles1" class="ramo" data-desbloquea="ingles2">Inglés 1</div>
+    <div id="calculo3" class="ramo bloqueado" data-desbloquea="calculo4">Cálculo 3</div>
+    <div id="ecuaciones" class="ramo">Ecuaciones diferenciales</div>
+    <div id="formacion1" class="ramo">Formación fundamental 1</div>
+
+    <!-- Semestre 4 -->
+    <div id="programacion" class="ramo">Programación</div>
+    <div id="fisica-electro" class="ramo bloqueado" data-desbloquea="ondas">Física general electromagnetismo</div>
+    <div id="exp-electro" class="ramo bloqueado" data-desbloquea="exp-ondas">Física experimental electromagnetismo</div>
+    <div id="mecanica" class="ramo bloqueado" data-desbloquea="mecanica-clasica">Mecánica</div>
+    <div id="calculo4" class="ramo bloqueado" data-desbloquea="metodos">Cálculo 4</div>
+    <div id="formacion2" class="ramo">Formación fundamental 2</div>
+
+    <!-- Tercer año - Semestre 5 -->
+    <div id="metodos" class="ramo bloqueado" data-desbloquea="electrodinamica, metodos-numericos">Métodos matemáticos de la física</div>
+    <div id="ondas" class="ramo bloqueado" data-desbloquea="electrodinamica">Ondas y óptica</div>
+    <div id="exp-ondas" class="ramo bloqueado" data-desbloquea="tecnicas">Física experimental ondas y óptica</div>
+    <div id="mecanica-clasica" class="ramo bloqueado" data-desbloquea="cuantica1">Mecánica clásica</div>
+    <div id="ingles2" class="ramo bloqueado" data-desbloquea="ingles3">Inglés 2</div>
+    <div id="intro-astro" class="ramo">Introducción a la Astronomía </div>
+
+    <!-- Semestre 6 -->
+    <div id="metodos-numericos" class="ramo bloqueado">Métodos numéricos y probabilidades</div>
+    <div id="moderna" class="ramo">Física moderna</div>
+    <div id="tecnicas" class="ramo bloqueado">Técnicas experimentales</div>
+    <div id="instrumentacion" class="ramo">Instrumentación Astronómica </div>
+    <div id="estelar" class="ramo">Astronomía estelar </div>
+    <div id="ingles3" class="ramo bloqueado" data-desbloquea="ingles4">Inglés 3</div>
+
+    <!-- Cuarto año - Semestre 7 -->
+    <div id="cuantica1" class="ramo bloqueado" data-desbloquea="cuantica2">Mecánica cuántica 1</div>
+    <div id="electrodinamica" class="ramo bloqueado">Electrodinámica</div>
+    <div id="galactica" class="ramo">Astronomía galáctica </div>
+    <div id="ingles4" class="ramo bloqueado">Inglés 4</div>
+
+    <!-- Semestre 8 -->
+    <div id="estadistica" class="ramo">Física estadística</div>
+    <div id="cosmologia" class="ramo">Cosmología </div>
+    <div id="cuantica2" class="ramo bloqueado">Mecánica cuántica 2</div>
+    <div id="seminario" class="ramo">Seminario de investigación</div>
+    <div id="formacion3" class="ramo">Formación fundamental 3</div>
+  </div>
+
+  <a href="index.html" class="boton" style="margin-top: 30px; display: inline-block;">Volver al Inicio</a>
+
+  <script src="script.js"></script>
+</body>
+</html>
