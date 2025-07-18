@@ -1,119 +1,119 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+/* Estilo base */
 body {
   margin: 0;
   padding: 0;
-  background-color: #fff0f5;
-  font-family: 'Segoe UI', sans-serif;
+  font-family: 'Poppins', sans-serif;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
+  background-size: 400% 400%;
+  animation: gradientBG 15s ease infinite;
+  color: white;
   display: flex;
-  justify-content: center;
+  flex-direction: column;
   align-items: center;
-  height: 100vh;
-  text-align: center;
 }
 
-.container {
-  padding: 30px;
-  background-color: white;
-  border-radius: 20px;
-  box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+@keyframes gradientBG {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
 }
 
 h1 {
-  color: #cc2b5e;
-  margin-bottom: 30px;
+  text-align: center;
+  margin-top: 40px;
+  font-size: 2.5em;
+  color: #ffffff;
+  text-shadow: 0 2px 5px rgba(0,0,0,0.5);
 }
 
-.buttons {
+.container, .grid {
+  max-width: 900px;
+  width: 100%;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.index .buttons {
   display: flex;
   flex-direction: column;
   gap: 20px;
-}
-
-/* Estilos para index.html */
-body.index {
-  background-color: #ffe6f0;
-  display: flex;
-  justify-content: center;
+  margin-top: 40px;
   align-items: center;
-  height: 100vh;
-  font-family: 'Segoe UI', sans-serif;
-}
-
-.container {
-  text-align: center;
-  background: white;
-  padding: 40px;
-  border-radius: 15px;
-  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
-}
-
-h1 {
-  color: #cc2b5e;
-}
-
-.buttons {
-  margin-top: 20px;
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
 }
 
 .boton {
-  background-color: #ff69b4;
+  background-color: #ff0050;
   color: white;
-  padding: 15px 30px;
+  padding: 16px 32px;
   border: none;
-  border-radius: 10px;
+  border-radius: 30px;
+  font-size: 1.3em;
+  font-weight: bold;
   text-decoration: none;
-  font-size: 1.2em;
-  transition: background-color 0.3s;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+  transition: transform 0.2s, background-color 0.3s;
 }
 
 .boton:hover {
-  background-color: #ff1493;
+  background-color: #ff3370;
+  transform: scale(1.05);
 }
 
-/* Estilos para la malla */
+/* Malla interactiva estilo TikTok */
 body.malla {
-  background-color: #fff0f5;
-  font-family: 'Segoe UI', sans-serif;
-  padding: 30px;
+  padding: 20px;
+  align-items: center;
 }
 
 .grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
   gap: 15px;
+  margin-top: 30px;
 }
 
 .ramo {
-  padding: 15px;
-  border-radius: 10px;
-  background-color: #ffc0cb;
-  color: black;
-  cursor: pointer;
+  background-color: #ff69b4;
+  padding: 16px;
+  border-radius: 20px;
   text-align: center;
-  transition: background-color 0.3s;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 1em;
+  transition: transform 0.2s, background-color 0.3s, box-shadow 0.3s;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.2);
+}
+
+.ramo:hover {
+  transform: scale(1.04);
+  box-shadow: 0 5px 20px rgba(0,0,0,0.3);
 }
 
 .ramo.aprobado {
-  background-color: #87cefa !important;
+  background-color: #00d4ff !important;
+  color: black;
 }
 
 .ramo.bloqueado {
   opacity: 0.4;
   pointer-events: none;
 }
-.boton {
+
+a.boton-volver {
+  display: inline-block;
+  margin-top: 40px;
+  background-color: #444;
+  padding: 12px 24px;
+  font-size: 1em;
+  border-radius: 25px;
   text-decoration: none;
-  background-color: #ff69b4;
   color: white;
-  padding: 15px 30px;
-  border-radius: 10px;
-  font-size: 1.2em;
   transition: background-color 0.3s;
 }
 
-.boton:hover {
-  background-color: #ff1493;
+a.boton-volver:hover {
+  background-color: #666;
 }
