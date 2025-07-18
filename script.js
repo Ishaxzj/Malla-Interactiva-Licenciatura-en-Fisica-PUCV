@@ -1,19 +1,16 @@
-document.addEventListener("DOMContentLoaded", () => {
-  const ramos = document.querySelectorAll(".ramo");
+function aprobar(id) {
+  const ramo = document.getElementById(id);
+  if (ramo.classList.contains("bloqueado")) return;
 
-  ramos.forEach(ramo => {
-    ramo.addEventListener("click", () => {
-      if (ramo.classList.contains("bloqueado")) return;
+  ramo.classList.toggle("aprobado");
 
-      ramo.classList.toggle("aprobado");
-      const desbloquea = ramo.dataset.desbloquea?.split(",") || [];
-
-      desbloquea.forEach(id => {
-        const target = document.getElementById(id.trim());
-        if (target && document.querySelectorAll(`[data-desbloquea*="${id}"]`).length === 1 || [...document.querySelectorAll(`[data-desbloquea*="${id}"]`)].every(r => r.classList.contains("aprobado"))) {
-          target.classList.remove("bloqueado");
-        }
-      });
+  const desbloquea = ramo.dataset.desbloquea;
+  if (desbloquea) {
+    desbloquea.split(',').forEach(targetId => {
+      const target = document.getElementById(targetId.trim());
+      if (target && target.classList.contains("bloqueado")) {
+        target.classList.remove("bloqueado");
+      }
     });
-  });
-});
+  }
+}
