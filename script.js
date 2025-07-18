@@ -1,16 +1,12 @@
-function aprobar(id) {
-  const ramo = document.getElementById(id);
-  if (ramo.classList.contains("bloqueado")) return;
-
-  ramo.classList.toggle("aprobado");
-
-  const desbloquea = ramo.dataset.desbloquea;
-  if (desbloquea) {
-    desbloquea.split(',').forEach(targetId => {
-      const target = document.getElementById(targetId.trim());
-      if (target && target.classList.contains("bloqueado")) {
-        target.classList.remove("bloqueado");
-      }
+document.addEventListener("DOMContentLoaded", () => {
+  document.querySelectorAll(".ramo").forEach(ramo => {
+    ramo.addEventListener("click", () => {
+      if (ramo.classList.contains("bloqueado")) return;
+      ramo.classList.toggle("aprobado");
+      ramo.dataset.desbloquea?.split(",").forEach(id => {
+        const el = document.getElementById(id.trim());
+        if (el) el.classList.remove("bloqueado");
+      });
     });
-  }
-}
+  });
+});
