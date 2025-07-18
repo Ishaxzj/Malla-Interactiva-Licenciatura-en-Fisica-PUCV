@@ -28,6 +28,82 @@ h1 {
   gap: 20px;
 }
 
+/* Estilos para index.html */
+body.index {
+  background-color: #ffe6f0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.container {
+  text-align: center;
+  background: white;
+  padding: 40px;
+  border-radius: 15px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+h1 {
+  color: #cc2b5e;
+}
+
+.buttons {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.boton {
+  background-color: #ff69b4;
+  color: white;
+  padding: 15px 30px;
+  border: none;
+  border-radius: 10px;
+  text-decoration: none;
+  font-size: 1.2em;
+  transition: background-color 0.3s;
+}
+
+.boton:hover {
+  background-color: #ff1493;
+}
+
+/* Estilos para la malla */
+body.malla {
+  background-color: #fff0f5;
+  font-family: 'Segoe UI', sans-serif;
+  padding: 30px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 15px;
+}
+
+.ramo {
+  padding: 15px;
+  border-radius: 10px;
+  background-color: #ffc0cb;
+  color: black;
+  cursor: pointer;
+  text-align: center;
+  transition: background-color 0.3s;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.ramo.aprobado {
+  background-color: #87cefa !important;
+}
+
+.ramo.bloqueado {
+  opacity: 0.4;
+  pointer-events: none;
+}
 .boton {
   text-decoration: none;
   background-color: #ff69b4;
