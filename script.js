@@ -68,18 +68,6 @@ for (let semestre in porSemestre) {
 }
 
 // ----- FUNCIONES -----
-function aprobarRamo(id) {
-  const el = document.getElementById(id);
-  if (!el.classList.contains("desbloqueado")) return;
-
-  el.classList.add("aprobado");
-  el.classList.remove("desbloqueado");
-  aprobados.add(id);
-
-  localStorage.setItem(tipoMalla, JSON.stringify([...aprobados]));
-
-  desbloquearDependientes();
-}
 
 function desbloquearDependientes() {
   ramos.forEach(ramo => {
@@ -91,4 +79,20 @@ function desbloquearDependientes() {
       div.classList.add("desbloqueado");
     }
   });
+}
+function aprobar(id) {
+  const ramo = document.getElementById(id);
+  if (ramo.classList.contains("bloqueado")) return;
+
+  ramo.classList.toggle("aprobado");
+
+  const desbloquea = ramo.dataset.desbloquea;
+  if (desbloquea) {
+    desbloquea.split(',').forEach(tid => {
+      const target = document.getElementById(tid.trim());
+      if (target && target.classList.contains("bloqueado")) {
+        target.classList.remove("bloqueado");
+      }
+    });
+  }
 }
